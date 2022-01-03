@@ -1,0 +1,9 @@
+
+<h1>My App</h1>
+<a [routerLink] = "homeRoute">Home</a>
+<a routerLink = "/setting">Settings</a>
+<h3>Using ngfor to print object of routs </h3>
+<a *ngFor="let route of routes" [routerLink]="route.url">{{route.linkName}} <br></a>
+<router-outlet></router-outlet>
+
+

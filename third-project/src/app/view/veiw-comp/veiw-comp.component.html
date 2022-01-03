@@ -1,0 +1,12 @@
+<!-- <p>veiw-comp works!</p> -->
+
+UserName: <input type="text" [(ngModel)]="userName">
+<button (click)="seach()" >Search</button>
+
+<div *ngIf="response">
+    <p>Login Name: {{response.login}}</p>
+    <p>Number of repos: {{response.public_repos}}</p>
+    <p>Number of gits: {{response.public_gists}}</p>
+    <p>Number of Followers: {{response.Followers}}</p>
+</div>
+

@@ -1,0 +1,25 @@
+<p>address-card works!</p>
+
+<div class="address-card">
+    <h1 class="name">{{user.name}}</h1>
+    <h3 class="title">{{user.title}}</h3>
+    
+    <button *ngIf="isCollapsed" (click) = "toggleIsCollapsed()">Expand</button>
+    <button *ngIf="!isCollapsed" (click) = "toggleIsCollapsed()">Collapse</button>
+
+    <div *ngIf="!isCollapsed">
+        <p class="address">{{user.address}}</p>
+        <div class="phone">
+            <p>Phone</p>
+            <p>{{user.Phone[0]}}</p>
+            <p>{{user.Phone[1]}}</p>
+        </div>
+        <div class="color" *ngIf="user.color.length > 0 ">
+            <p>Colours</p>
+            <ul>
+                <li *ngFor="let varColor of user.color" >{{varColor}}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
